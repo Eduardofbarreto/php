@@ -8,6 +8,7 @@ $email = $_POST["email"];
 echo "O nome digitado foi: " . htmlspecialchars($nome) . " " . htmlspecialchars($sobrenome) . ".";
 echo "<br> A idade é de: " . htmlspecialchars($idade);
 echo "<br>Seu e-mail é: " . htmlspecialchars($email);
+echo "<br>Seu endereço é: " . htmlspecialchars($endereco);
 
 $myfile = fopen("newfile.txt", "w") or die("Unable to open file");
 
@@ -22,6 +23,9 @@ fwrite($myfile, $idade . "\n");
 
 // Você não utilizou o $email para salvar no arquivo, se desejar, adicione:
 // fwrite($myfile, $email . "\n");
+
+//fwrite($myfile, $endereco . "\n");
+
 
 fclose($myfile);
 
